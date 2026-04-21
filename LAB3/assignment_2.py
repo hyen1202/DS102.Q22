@@ -35,15 +35,15 @@ Nhận xét:
         Recall: 0.9923
         F1: 0.8296
     - Kết quả của SVM tự cài đặt (epoches = 200, lr = 0.0001, C = 0.1)
-        Precision: 0.7005
-        Recall: 0.9897
-        F1: 0.8204
+        Precision: 0.7314
+        Recall: 0.9846
+        F1: 0.8393
     2. Phân tích chỉ số
         - Recall cao chứng tỏ model ít bỏ sót ca PNEUMONIA
         - Precision thấp cho thấy model dự đoán PNEUMONIA quá nhiều
           -> model bị bias về phía PNEUMONIA 
     3. So sánh 
-        - SVC sklearn cho kết quả cao hơn một chút vì sklearn tối ưu bằng thuật toán SMO, chính xác hơn SGD
+        - Cả hai đều có pattern giống nhau (Recall cao, Precision thấp) nhưng SVM tự code nhỉnh hơn nhưng không chênh lệch nhiều 
         - SVC không thay đổi khi đổi C từ 100 → 0.01, còn SVM tự code có thay đổi.
     4. Giải thích nguyên nhân
         - Recall cao hơn là do hai lớp mất cân bằng, số lượng PNEUMONIA trong train nhiều hơn NORMAL

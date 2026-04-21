@@ -27,6 +27,7 @@ class SVM:
         pbar = tqdm(range(self.epoches))
         for i in pbar:
             indices = np.arange(N)
+            np.random.seed(42) 
             np.random.shuffle(indices)
 
             for ith in indices:
